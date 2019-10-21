@@ -21,7 +21,9 @@ if keys == [],
     """)
 
 config :nerves_firmware_ssh,
-  authorized_keys: Enum.map(keys, &File.read!/1)
+  authorized_keys: [
+    File.read!(Path.join(System.user_home!(), ".ssh/id_rsa.pub"))
+  ]
 
 # Configure nerves_init_gadget.
 # See https://hexdocs.pm/nerves_init_gadget/readme.html for more information.

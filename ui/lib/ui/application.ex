@@ -8,8 +8,6 @@ defmodule Ui.Application do
   def start(_type, _args) do
     # List all child processes to be supervised
     children = [
-      # Start the Ecto repository
-      Ui.Repo,
       # Start the endpoint when the application starts
       UiWeb.Endpoint
       # Starts a worker by calling: Ui.Worker.start_link(arg)

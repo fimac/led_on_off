@@ -7,17 +7,14 @@
 # General application configuration
 use Mix.Config
 
-config :ui,
-  ecto_repos: [Ui.Repo]
-
 # Configures the endpoint
 config :ui, UiWeb.Endpoint,
-  url: [host: "localhost"],
-  secret_key_base: "suE8zUI7y0pTBlOLjXf/chN3m+JpTjcwMhPpxUY1bnI9R6f+8xpHMve6QMRa3/H5",
+  url: [host: "nerves.local"],
+  secret_key_base: "fB053G3B35M+y5q3OjzlkpzPELl/V5o4YZLtBTYunMJtidCuEjTJlur+44bpE8Zy",
   render_errors: [view: UiWeb.ErrorView, accepts: ~w(html json)],
   pubsub: [name: Ui.PubSub, adapter: Phoenix.PubSub.PG2],
   live_view: [
-    signing_salt: "VPR7+B0DvigtncZV+1iXJxwVqRYk0aqC"
+    signing_salt: "gTg9GWE4fvW3NEWa2S/AEQrvnkQaItEw"
   ]
 
 # Configures Elixir's Logger

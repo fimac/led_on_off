@@ -18,7 +18,7 @@ defmodule UiWeb.LedView do
               <button phx-click="red-off">Off</button>
         </div>
         <div class="column green-led">
-            <h1>Greed Led</h1>
+            <h1>Green Led</h1>
                 <button phx-click="green-on">On</button>
                 <button phx-click="green-off">Off</button>
         </div>
@@ -35,25 +35,21 @@ defmodule UiWeb.LedView do
 
   def handle_event("red-on", _, %{assigns: %{red_led: red_led}} = socket) do
     GPIO.write(red_led, 1)
-    IO.puts("red led on")
     {:noreply, socket}
   end
 
   def handle_event("red-off", _, %{assigns: %{red_led: red_led}} = socket) do
     GPIO.write(red_led, 0)
-    IO.puts("red led off")
     {:noreply, socket}
   end
 
   def handle_event("green-on", _, %{assigns: %{green_led: green_led}} = socket) do
     GPIO.write(green_led, 1)
-    IO.puts("green led on")
     {:noreply, socket}
   end
 
   def handle_event("green-off", _, %{assigns: %{green_led: green_led}} = socket) do
     GPIO.write(green_led, 0)
-    IO.puts("green led off")
     {:noreply, socket}
   end
 end

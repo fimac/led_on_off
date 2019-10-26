@@ -8,7 +8,7 @@ defmodule UiWeb.LedView do
   def render(assigns) do
     ~L"""
     <section class="phx-hero">
-        <h1>Blinky</h1>
+        <h1>Led goes on, Led goes off</h1>
     </section>
 
     <section class="row">
